@@ -1,6 +1,6 @@
 // Import project images
-import portfolioImg from '../assets/portfolio.png';
-import arsonistImg from '../assets/AmongUs.png';
+import portfolioImg from '@/assets/portfolio.png';
+import arsonistImg from '@/assets/AmongUs.png';
 
 export const projectsData = [
   {
