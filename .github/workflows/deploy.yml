@@ -28,17 +28,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/bun-action@v1
         with:
-          node-version: 20
-          cache: 'npm'
-          
-      - name: Install dependencies
-        run: npm ci
+          bun-version: latest
+      
+      - name: Install dependencies with Bun
+        run: bun install 
         
-      - name: Build with Vite
-        run: npm run build
+      - name: Build with Bun
+        run: bun run build
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
